@@ -1,0 +1,192 @@
+%-------------------------
+% Resume in LaTeX
+% Author : Ruslan Dudnikov
+% Based on a template by Sourabh Bajaj (MIT License)
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\definecolor{linkblue}{HTML}{1A5DAD}
+\usepackage[colorlinks=true,urlcolor=linkblue,linkcolor=linkblue]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small #1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeItemPlain}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://www.linkedin.com/in/jerryletehen/?locale=en-US}{\Large Ruslan Dudnikov}} & Email: \href{mailto:jerryletehen@gmail.com}{jerryletehen@gmail.com}\\
+  Senior Unity Developer, 8+ years of experience & Mobile: \href{tel:+48608203249}{+48 608 203 249} \\
+  \href{https://docs.google.com/document/d/1XJFD5_141Vrr5oRd0MXfJaZKTrQS-mJGURzBS2cHO9I/edit?usp=sharing}{Projects} $|$ \href{https://github.com/JerryLetehen}{GitHub} & Location: Gda\'nsk, Poland \\
+\end{tabular*}
+
+
+%-----------SKILLS-----------------
+\section{Skills}
+  \resumeSubHeadingListStart
+    \resumeItem{Unity C\#}
+      {UI (Scrolls, Menus, Complex layouts) $|$ Addressables \& Asset Bundles, Backward compatibility management $|$ Asset Management $|$ Profiling \& Performance Optimization $|$ DI (Zenject) $|$ UniTask $|$ ZString $|$ Localization, Analytics, Ads SDKs (Firebase, Facebook, AppsFlyer, OneSignal, Ironsource, CyberSource) $|$ ECS $|$ Native Android and iOS plugins (e.g. Notifications, Live Activities) $|$ Test Framework $|$ DOTween $|$ Redis $|$ WebGL $|$ VR (SteamVR, LIV SDK) $|$ Physics $|$ Photon}
+    \resumeItem{Tools}
+      {Git $|$ Jira $|$ Confluence $|$ Bitbucket $|$ GitLab $|$ CI/CD with Bitbucket Pipelines $|$ AWS S3 $|$ AWS CodeArtifacts $|$ Figma $|$ Miro $|$ Postman $|$ Backtrace $|$ DataDog $|$ OpenSearch $|$ Rider $|$ Android Studio $|$ XCode}
+    \resumeItem{AI}
+      {Kiro (Claude, GPT LLMs) $|$ Specs $|$ MCP $|$ Skills}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\href{https://www.linkedin.com/company/game-story}{GameStory}}{Remote}
+      {Senior Unity Developer}{Aug 2022 -- Oct 2026}
+      \resumeItemListStart
+        \resumeItemPlain{Led major meta features and architectural changes, prepared release candidates, and post-release monitoring.}
+        \resumeItemPlain{Resolved release incidents, crashes and production bugs.}
+        \resumeItemPlain{Performed code reviews and supported developers, animators with Unity and Git, reducing blockers.}
+        \resumeItemPlain{Closely collaborated with the Artist and Product teams to design and implement features.}
+        \resumeItemPlain{Reduced build texture size by 2x and Addressables build size by 30\%.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\href{https://www.linkedin.com/company/wannaplayteam}{WannaPlay}}{Remote}
+      {Unity Developer}{Sep 2021 -- Aug 2022}
+      \resumeItemListStart
+        \resumeItemPlain{Designed architecture solutions, implemented features, prototypes and MVPs.}
+        \resumeItemPlain{Contributed to team workflow, code review, and documentation.}
+        \resumeItemPlain{Worked closely with Product and QA on functionality and gameplay mechanics.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\href{https://www.linkedin.com/company/murka}{Murka}}{Remote}
+      {Unity Developer}{Apr 2021 -- Jul 2021}
+      \resumeItemListStart
+        \resumeItemPlain{Developed slots using internal tools and functionality.}
+        \resumeItemPlain{Assembled animations, complex UI and scripted mechanics.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\href{https://www.linkedin.com/company/tango-me}{Tango}}{Remote}
+      {Unity Developer}{Sep 2020 -- Mar 2021}
+      \resumeItemListStart
+        \resumeItemPlain{Developed games to be embedded into the native Android and iOS apps.}
+        \resumeItemPlain{Collaborated closely with native-platform developers to resolve technical issues with the Unity module.}
+        \resumeItemPlain{Wrote documentation on technical caveats and workflow.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\href{https://www.linkedin.com/company/synesis}{Synesis}}{Minsk, Belarus}
+      {Unity Developer}{Jan 2020 -- Sep 2020}
+      \resumeItemListStart
+        \resumeItemPlain{Improved client architecture and refactored legacy code.}
+        \resumeItemPlain{Developed features that improved the user experience.}
+        \resumeItemPlain{Fixed bugs and client-server communication issues.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\href{https://www.linkedin.com/company/iridescentvr/}{Iridescent Studio}}{Minsk, Belarus}
+      {Unity Developer}{Apr 2018 -- Jan 2020}
+      \resumeItemListStart
+        \resumeItemPlain{Developed high-load, multi-user educational VR experiences.}
+        \resumeItemPlain{Tested and improved quality with the team by meeting real users.}
+        \resumeItemPlain{Bug fixing and performance improvements.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------REFERENCES-----------------
+\section{References}
+  \resumeSubHeadingListStart
+    \resumeItemPlain{Presented VR development experience in Oct 2018 at \href{https://youtu.be/4KYmksUMrW8}{MUUG Meetup \#3}.}
+    \resumeItemPlain{Ludum Dare \#42 (Running Out Of Space) with the \href{https://youtu.be/nttSBZAA-6A}{`Push it VR'} project.}
+    \resumeItemPlain{GlobalGameJam January 2018 with the \href{https://globalgamejam.org/2018/games/hungry-arms-vr}{`Hungry Arms VR | WoWlab hack TEAM'} project.}
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
