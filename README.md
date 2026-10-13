@@ -2,15 +2,20 @@
 
 My résumé, written in LaTeX and compiled to PDF. Single-page, one-column, and ATS-parsable.
 
-**[📄 Download the PDF](ruslan_dudnikov_resume.pdf)**
+**[📄 Download the résumé (PDF)](ruslan_dudnikov_resume.pdf)** &nbsp;·&nbsp; **[📁 Projects / portfolio (PDF)](ruslan_dudnikov_projects.pdf)**
 
 ![Résumé preview](resume_preview.png)
 
-The compiled PDF and PNG preview live in this repo and are regenerated automatically by GitHub Actions on every push to `main`, so the source and the output never drift apart.
+The compiled PDFs and the résumé PNG preview live in this repo and are regenerated automatically by GitHub Actions on every push to `main`, so the source and the output never drift apart.
 
 ## Edit
 
-All content lives in [`ruslan_dudnikov_resume.tex`](ruslan_dudnikov_resume.tex). Edit that file, commit, and push.
+Two LaTeX sources:
+
+- [`ruslan_dudnikov_resume.tex`](ruslan_dudnikov_resume.tex) — the one-page résumé.
+- [`ruslan_dudnikov_projects.tex`](ruslan_dudnikov_projects.tex) — the detailed projects / portfolio document.
+
+Edit either file, commit, and push.
 
 ## Build locally
 
@@ -18,6 +23,7 @@ All content lives in [`ruslan_dudnikov_resume.tex`](ruslan_dudnikov_resume.tex).
 
 ```sh
 pdflatex ruslan_dudnikov_resume.tex
+pdflatex ruslan_dudnikov_projects.tex   # run twice for correct page numbers
 ```
 
 ### With Docker (no local LaTeX needed)
@@ -28,7 +34,7 @@ pdflatex ruslan_dudnikov_resume.tex
 
 ## Build on GitHub
 
-Pushing to `main` triggers the [workflow](.github/workflows/docker-image.yml), which compiles the PDF, renders a `resume_preview.png`, uploads the PDF as a build artifact, and commits the regenerated PDF and preview back to the repo.
+Pushing to `main` triggers the [workflow](.github/workflows/docker-image.yml), which compiles both PDFs, renders a `resume_preview.png`, uploads the PDFs as build artifacts, and commits the regenerated files back to the repo.
 
 ## Credit
 

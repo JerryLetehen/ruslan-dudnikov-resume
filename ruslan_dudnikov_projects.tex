@@ -1,0 +1,308 @@
+%-------------------------
+% Projects / Portfolio in LaTeX
+% Author : Ruslan Dudnikov
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[margin=0.9in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\definecolor{linkblue}{HTML}{1A5DAD}
+\usepackage[colorlinks=true,urlcolor=linkblue,linkcolor=linkblue]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{needspace}
+\input{glyphtounicode}
+
+% Page style: "Page X of Y" footer, no header rule
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[C]{\small Page \thepage\ of \pageref{LastPage}}
+
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+
+% Section formatting
+\titleformat{\section}{\Large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{14pt}{8pt}
+
+% Project title: a bold subsection-like heading
+\titleformat{\subsection}{\large\bfseries}{}{0em}{}
+\titlespacing*{\subsection}{0pt}{12pt}{4pt}
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+
+% One project. #1 = number(s)+title, #2 = period, #3 = description,
+% #4 = tech stack, #5 = role, #6 = responsibilities (itemize body)
+\newcommand{\project}[6]{%
+  \par\addvspace{20pt}%
+  \noindent\begin{minipage}{\linewidth}
+  \subsection*{#1}
+  \textbf{Period:} #2 \\
+  \textbf{Role:} #5 \\
+  \textbf{Tech Stack:} #4 \\
+  \textbf{Description:} #3
+  \par\smallskip
+  \textbf{Responsibilities:}
+  \begin{itemize}[leftmargin=1.4em,itemsep=1pt,topsep=2pt,parsep=0pt]
+    #6
+  \end{itemize}
+  \end{minipage}%
+  \par\addvspace{20pt}%
+}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING-----------------
+{\Huge\bfseries Ruslan Dudnikov}\\[2pt]
+{\large Senior Unity Developer}\\[6pt]
+
+%----------SUMMARY-----------------
+\section*{Summary}
+\begin{itemize}[leftmargin=1.4em,itemsep=2pt,topsep=2pt]
+  \item 8 years of \textbf{commercial} software development experience (since April 2018).
+  \item 16 commercial projects.
+  \item Expertise and professional interest in:
+    \begin{itemize}[leftmargin=1.4em,itemsep=1pt,topsep=1pt]
+      \item Mobile and desktop game development and applications
+      \item VR experiences and games
+    \end{itemize}
+  \item Key experience with:
+    \begin{itemize}[leftmargin=1.4em,itemsep=1pt,topsep=1pt]
+      \item Unity (UI, Addressables, SDK, Unity Editor Tools, Prefabs, Localization, Analytics, Profiling, Optimization, Refactoring)
+      \item C\#
+      \item Git
+      \item Client-server communication
+    \end{itemize}
+\end{itemize}
+
+%----------GENERAL INFORMATION-----------------
+\section*{General Information}
+\textbf{Languages:} \\
+\hspace*{1.4em} English -- B2 (reading/writing/speaking) \\
+\hspace*{1.4em} Polish -- B1 (reading/writing/speaking) \\
+\hspace*{1.4em} Russian -- Native \\
+\textbf{Email:} \href{mailto:jerryletehen@gmail.com}{jerryletehen@gmail.com} \\
+\textbf{Phone:} +48 608 203 249 \\
+\textbf{LinkedIn:} \href{https://www.linkedin.com/in/jerryletehen/}{linkedin.com/in/jerryletehen} \\
+\textbf{GitHub:} \href{https://github.com/JerryLetehen}{github.com/JerryLetehen} \\
+\textbf{Telegram:} \href{https://t.me/JerryLetehen}{t.me/JerryLetehen} \\
+\textbf{Code examples:} \\
+\hspace*{1.4em} \href{https://gitfront.io/r/JerryLetehen/t7acD6K3LLKV/SuperScaneUnityAssignmentAugust2024/}{SuperScane Unity Assignment} (August 2024) \\
+\hspace*{1.4em} \href{https://gitfront.io/r/JerryLetehen/SpaceXTestTask/}{SpaceX Test Task} (September 2020)
+
+%----------PROJECTS-----------------
+\section*{Projects}
+
+\project{Project \#15, \#16 --- Bingo Bling | Solitaire Stash}
+  {August 2022 -- October 2026}
+  {Bingo Bling, Solitaire Stash (\href{https://gmstry.com/}{gmstry.com}).}
+  {C\#, Unity 3D, Jira, Confluence, Git (BitBucket), Addressables, CI/CD (Bitbucket), Figma, Miro, AI (agents: Kiro, Claude, Codex) with Unity MCP, ECS.}
+  {Senior Unity Developer}
+  {
+    \item major features development;
+    \item preparing release candidates, post publishing review;
+    \item release incidents resolving;
+    \item release major bugs fixing;
+    \item client-server architecture improvements;
+    \item Addressables and backward compatibility management;
+    \item manual testing;
+    \item planning and estimating;
+    \item designing architecture solutions;
+    \item contributing into team workflow;
+    \item code-review;
+    \item documenting.
+  }
+
+\project{Project \#14 --- Football}
+  {September 2021 -- August 2022}
+  {Unreleased football (Soccer) related mobile games.}
+  {C\#, Unity 3D, Jira, Confluence, Git (GitLab), Zenject.}
+  {Unity Developer}
+  {
+    \item developing prototypes;
+    \item planning and estimating;
+    \item designing architecture solutions;
+    \item contributing into team workflow;
+    \item cross team code-review;
+    \item documenting.
+  }
+
+\project{Project \#13 --- Slots Era}
+  {April 2021 -- July 2021}
+  {A brand new horizon in the world of Vegas Slot Machines.}
+  {C\#, Unity 3D, Jira, Confluence, Git (GitLab).}
+  {Unity Developer}
+  {
+    \item assembling new slots by internal tools and written functionality;
+    \item planning and estimating;
+    \item functionality development.
+  }
+
+\project{Project \#12 --- Pinata}
+  {September 2020 -- March 2021}
+  {The small game that engages users to tap Pinata to blow it up and get candies.}
+  {C\#, Unity 3D -- Embedded within Android and iOS, Jira, Confluence, Git.}
+  {Game Developer}
+  {
+    \item coordinating native developers to embed the game;
+    \item planning and estimating;
+    \item functionality development;
+    \item testing and quality assurance;
+    \item bug-fixing and performance improvement.
+  }
+
+\project{Project \#11 --- Belbet}
+  {January 2020 -- August 2020}
+  {\href{https://belbet.by/}{belbet.by}. The new instant belbet lottery is already available on three software platforms -- iOS, Android, and Web. The key difference between belbet and other lotteries operating in the country is not only the use of the online platform but also the developed interactive component, the ability to play at any time, as well as non-cash accepting bets and withdrawing funds.}
+  {C\#, Unity 3D, Android, iOS, Web, Jira, Confluence, Git.}
+  {Unity Developer}
+  {
+    \item functionality development;
+    \item CI/CD maintenance (TeamCity);
+    \item remote config features;
+    \item new lottery and meta features;
+    \item testing and quality assurance;
+    \item bug-fixing and performance improvement.
+  }
+
+\project{Project \#10 --- Domino Master! \#1 Multiplayer Game}
+  {November 2019 -- January 2020}
+  {\href{https://play.google.com/store/apps/details?id=com.TikGames.DominoMaster}{Google Play}, \href{https://apps.apple.com/us/app/domino-master/id1154039096}{App Store}. Domino Master is the first domino app to deliver true multiplayer gameplay for both 2 and 4 player games. From statistic tracking to achievements and rankings, this is the total package. It delivers the perfect blend of 2D and 3D graphics for ease of gameplay and the best user experience, with three challenging levels of play against AI bots.}
+  {C\#, Unity 3D, Android, iOS, Jira, Confluence, Git.}
+  {Game Developer}
+  {
+    \item project documentation;
+    \item communication with client;
+    \item legacy code refactoring, optimization;
+    \item functionality development;
+    \item testing and quality assurance;
+    \item bug-fixing and performance improvement.
+  }
+
+\project{Project \#9 --- Abelana's Atom Maker (Steam)}
+  {August 2019 -- November 2019}
+  {Visualize atomic orbitals, navigate across energy levels, and gain an intuitive understanding of the composition of atoms and their electron configurations by assembling all elements of the periodic table. An educational VR experience designed for enthusiasts and academics alike. Primarily designed for premium virtual reality platforms such as HTC Vive, Oculus Rift, and Windows Mixed Reality, with potential porting to other platforms.}
+  {C\#, Unity 3D, HTC Vive, Steam, Jira, Confluence, Git, Photon (RPC, master client), Unity Physics, Unity SteamVR API, LIV SDK, Localization, Agile.}
+  {Unity Developer}
+  {
+    \item extracting a part of Virtual Classroom: Atoms and Orbitals project as a standalone module;
+    \item functionality development;
+    \item testing and quality assurance;
+    \item bug-fixing and performance improvement.
+  }
+
+\project{Project \#8 --- Visceral Science: Grasping the universe through virtual reality}
+  {March 2019 -- August 2019}
+  {\href{https://www.abelanavr.com/visceral-science}{abelanavr.com/visceral-science}. A VR Education project developed in partnership with The World Science Festival and Columbia University, with support from Verizon Communications. The project leverages 5G technology, combining 5G, VR and education. A class of students and their teacher are immersed in a multiplayer environment where they explore the galaxy and work in teams to understand how stars form, evolve and die. Primarily designed for premium VR platforms such as HTC Vive, Oculus Rift, and Windows Mixed Reality.}
+  {C\#, Unity 3D, HTC Vive, Steam, Jira, Confluence, Git, Photon (RPC, master client), Unity Physics, Unity SteamVR API, LIV SDK, Localization, Agile.}
+  {Unity Developer}
+  {
+    \item functionality development;
+    \item testing and quality assurance;
+    \item teleportation features;
+    \item online multi-user objects interacting features;
+    \item client-server image transfer features;
+    \item high-quality video streaming using 5G network (800 megabits download and 100 megabits upload per second);
+    \item bug-fixing and performance improvement.
+  }
+
+\project{Project \#7 --- Mobile application for VR Classroom}
+  {July 2018 -- January 2020}
+  {Assistant app to VR Classroom. The app allows independent mobile access for teachers into a multi-user VR experience and provides a possibility to control the flow of scenes and interact with objects in it. It does not operate as a virtual reality display but supports and enhances a VR session experienced by guests of location-based VR venues, working as a supporting tool for teachers and other presenters.}
+  {C\#, Unity 3D, Android, iOS, Jira, Confluence, Git.}
+  {Unity Developer}
+  {
+    \item functionality development;
+    \item extracting base architecture (Core module);
+    \item assets optimization;
+    \item UI building;
+    \item building and publishing iOS and Android;
+    \item testing and quality assurance;
+    \item bug-fixing and performance improvement.
+  }
+
+\project{Project \#6 --- VR-in-VR virtual conference of LBVR operators}
+  {August 2018 -- October 2018}
+  {\href{https://www.abelanavr.com/vr-in-vr}{abelanavr.com/vr-in-vr}. The product gives users the experience of participating in a live interactive virtual reality lecture that explores topics such as extra dimensions, the unified theory of physics, and the multiverse. The VR audience engages in the social experience of a worldwide virtual classroom while creating and handling higher-dimensional objects that stretch the bounds of what is possible in a real environment.}
+  {C\#, Unity 3D, HTC Vive, Steam, Jira, Confluence, Git, Photon (RPC, master client), Unity Physics, Unity SteamVR API, LIV SDK, Localization, Agile.}
+  {Unity Developer}
+  {
+    \item functionality development;
+    \item architecture, SDK implementation;
+    \item localization implementation and maintenance;
+    \item client-server communication;
+    \item profiling and optimization;
+    \item testing and quality assurance;
+    \item bug-fixing and performance improvement.
+  }
+
+\project{Project \#5 --- Virtual Classroom: Atoms and Orbitals}
+  {April 2018 -- November 2019}
+  {\href{https://www.abelanavr.com/virtual-classroom}{abelanavr.com/virtual-classroom}. A virtual reality experience for learning about Atoms and Orbitals (Chemistry). A multi-user educational experience with gamification and game elements for location-based VR, dedicated to atoms, orbitals, the periodic table of elements, and a variety of tools that bring this conversation to a new level. Features drawing elements for presenter and visitors, VFX scenes, and 3D interactive objects.}
+  {C\#, Unity 3D, HTC Vive, Steam, Jira, Confluence, Git, Photon (RPC, master client), Unity Physics, Unity SteamVR API, LIV SDK, Localization, Agile.}
+  {Unity Developer}
+  {
+    \item functionality development;
+    \item architecture, SDK implementation;
+    \item localization implementation and maintenance;
+    \item client-server communication;
+    \item profiling and optimization;
+    \item testing and quality assurance;
+    \item bug-fixing and performance improvement.
+  }
+
+\project{Project \#4 --- Virtual Classroom}
+  {March 2018 -- April 2018}
+  {The product gives users the experience of participating in a live interactive virtual reality lecture that explores topics such as extra dimensions, the unified theory of physics, and the multiverse. The VR audience engages in the social experience of a worldwide virtual classroom while creating and handling higher-dimensional objects.}
+  {C\#, Unity 3D, MS Visual Studio, Git, Jira, Confluence, Photon (RPC, master client).}
+  {Unity Developer}
+  {
+    \item functionality development;
+    \item testing and quality assurance;
+    \item bug-fixing and performance improvement.
+  }
+
+\project{Project \#3 --- Hungry Arms VR | WoWlab hack TEAM}
+  {January 2018}
+  {Non-commercial project. \href{https://globalgamejam.org/2018/games/hungry-arms-vr}{globalgamejam.org/2018/games/hungry-arms-vr}. GlobalGameJam.}
+  {C\#, Unity 3D, MS Visual Studio, Trello.}
+  {Game Developer}
+  {
+    \item functionality development;
+    \item testing and quality assurance;
+    \item bug-fixing and performance improvement.
+  }
+
+\project{Project \#2 --- SpaceInvaders (hard action game, remake)}
+  {December 2017}
+  {Non-commercial project. My remake of the Space Invaders game. Available for macOS and Windows (\href{https://goo.gl/8hgSdT}{link}). Took 30 hours of work. Source code is available on \href{https://goo.gl/WXCnp4}{BitBucket}.}
+  {C\#, Unity 3D, MS Visual Studio, Trello.}
+  {Game Developer}
+  {
+    \item functionality development;
+    \item testing and quality assurance;
+    \item bug-fixing and performance improvement.
+  }
+
+\project{Project \#1 --- Neon Race -- "Climb from Lava"}
+  {August 2017 -- November 2017}
+  {Non-commercial project. \href{https://youtu.be/AOqWjMk_0Xk}{youtu.be/AOqWjMk\_0Xk}. A virtual reality game where the user runs away from the black hole (lava) by climbing huge blocks in space. Some platforms give the user energy to use a grappling hook to pull itself to platforms above and run faster. At the top of each platform, the user jumps to the next one or uses the grappling hook. Later platforms have blockers that can kill the player, so the player uses a shield or moves to other sides of the block. At the end of the level, the player is pulled by gravity through a safe zone and wins the game.}
+  {C\#, Unity 3D, MS Visual Studio, Trello.}
+  {Game Developer}
+  {
+    \item functionality development;
+    \item testing and quality assurance;
+    \item bug-fixing and performance improvement.
+  }
+
+\end{document}

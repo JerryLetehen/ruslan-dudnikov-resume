@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   compile:
-    name: Compile resume pdf
+    name: Compile resume and projects pdf
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
@@ -23,15 +23,21 @@ jobs:
           options: -v ${{ github.workspace }}:/data
           run: |
             cd data
+            # Resume (single page)
             pdflatex ruslan_dudnikov_resume.tex
             gs -sDEVICE=png16m -r150 -dTextAlphaBits=4 -dGraphicsAlphaBits=4 \
                -o resume_preview.png ruslan_dudnikov_resume.pdf
-      - name: Upload compiled PDF
+            # Projects (multi-page: compile twice for "Page X of Y")
+            pdflatex ruslan_dudnikov_projects.tex
+            pdflatex ruslan_dudnikov_projects.tex
+      - name: Upload compiled PDFs
         uses: actions/upload-artifact@v4
         with:
-          name: resume-pdf
-          path: ruslan_dudnikov_resume.pdf
+          name: resume-pdfs
+          path: |
+            ruslan_dudnikov_resume.pdf
+            ruslan_dudnikov_projects.pdf
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Apply pdflatex changes
-          file_pattern: ruslan_dudnikov_resume.pdf resume_preview.png
+          file_pattern: ruslan_dudnikov_resume.pdf resume_preview.png ruslan_dudnikov_projects.pdf
